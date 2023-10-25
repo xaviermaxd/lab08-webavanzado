@@ -1,0 +1,24 @@
+<!-- listar-productos.component.html -->
+<div class="panel-body">
+    <button (click)="navegarACrearProducto()" class="btn btn-success">Agregar producto</button>
+</div>
+<div class="col-md-12">
+    <table class="table table-bordered buttons-margin">
+        <tr>
+            <th>Codigo</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th class="col-md-2">Acciones</th>
+            
+        </tr>
+        <tr *ngFor="let producto of productos">
+            <td>{{ producto.codigo }}</td>
+            <td>{{ producto.nombre }}</td>
+            <td>{{ producto.precio }}</td>
+            <td><button class="btn btn-danger" (click)="eliminarProducto(producto.codigo)">Eliminar</button>
+            <button class="btn btn-default" (click)="navegarActualizarProducto(producto.codigo)">Modificar</button></td>
+        </tr>
+
+    </table>
+</div>
+

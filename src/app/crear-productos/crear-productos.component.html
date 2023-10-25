@@ -1,0 +1,28 @@
+<!-- crear-productos.component.html -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-4 col-md-4 text-center">
+            <h3>Crear Producto</h3>
+        </div>
+        <div class="col-md-offset-4 col-md-4">
+            <form [formGroup]="productoForm" (ngSubmit)="agregarProducto()">
+                
+                <table class="table">
+                    <tr><label for="codigo">Codigo del producto:</label></tr>
+                    <tr><input id="codigo" type="text" formControlName="codigo" class="form-control"></tr>
+                    <tr><label for="nombre">Nombre del producto:</label></tr>
+                    <tr><input id="nombre" type="text" formControlName="nombre" class="form-control"></tr>
+                    <tr><label for="precio">Precio:</label></tr>
+                    <tr><input id="precio" type="number" formControlName="precio" class="form-control"></tr>
+                </table>
+
+
+
+                <button type="submit" class="btn btn-default btn-lg">Agregar producto</button>
+                <button (click)="navegarAProductos()" class="btn btn-danger btn-lg">Cancelar</button>
+                
+            </form>
+            
+        </div>
+    </div>
+</div>
